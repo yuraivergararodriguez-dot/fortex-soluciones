@@ -1,0 +1,3 @@
+
+const btn=document.querySelector('.menu-btn');const menu=document.querySelector('.menu');btn?.addEventListener('click',()=>menu.classList.toggle('open'));document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));document.getElementById('quote').addEventListener('submit',e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const msg=['Hola FORTEX, quiero solicitar una cotización.','',`Nombre: ${v('name')}`,`Teléfono: ${v('phone')}`,`Servicio: ${v('service')}`,`Detalles: ${v('details')}`].join('
+');window.open('https://wa.me/527713456533?text='+encodeURIComponent(msg),'_blank')});
